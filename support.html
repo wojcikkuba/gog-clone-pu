@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Wsparcie - Sklep z Grami</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+          <div class="logo" aria-label="GOG Logo">GOG Atrapa</div>
+          <nav aria-label="Główna nawigacja">
+            <ul>
+              <!-- Rozwijane menu dla "Sklep" -->
+              <li class="has-dropdown">
+                <a href="#">Sklep</a>
+                <div class="dropdown">
+                  <ul>
+                    <li><a href="#">Sklep 1</a></li>
+                    <li><a href="#">Sklep 2</a></li>
+                    <li><a href="#">Sklep 3</a></li>
+                  </ul>
+                </div>
+              </li>
+              <!-- Rozwijane menu dla "Nowości" -->
+              <li class="has-dropdown">
+                <a href="#">Nowości</a>
+                <div class="dropdown">
+                  <ul>
+                    <li><a href="#">Nowość 1</a></li>
+                    <li><a href="#">Nowość 2</a></li>
+                    <li><a href="#">Nowość 3</a></li>
+                  </ul>
+                </div>
+              </li>
+              <!-- Rozwijane menu dla "Promocje" -->
+              <li class="has-dropdown">
+                <a href="#">Promocje</a>
+                <div class="dropdown">
+                  <ul>
+                    <li><a href="#">Promocja 1</a></li>
+                    <li><a href="#">Promocja 2</a></li>
+                    <li><a href="#">Promocja 3</a></li>
+                  </ul>
+                </div>
+              </li>
+              <!-- Rozwijane menu dla "Kolekcja" -->
+              <li class="has-dropdown">
+                <a href="#">Kolekcja</a>
+                <div class="dropdown">
+                  <ul>
+                    <li><a href="#">Kolekcja 1</a></li>
+                    <li><a href="#">Kolekcja 2</a></li>
+                    <li><a href="#">Kolekcja 3</a></li>
+                  </ul>
+                </div>
+              </li>
+              <!-- Rozwijane menu dla "Wsparcie" -->
+              <li class="has-dropdown">
+                <a href="support.html">Wsparcie</a>
+                <div class="dropdown">
+                  <ul>
+                    <li><a href="support.html#faq">FAQ</a></li>
+                    <li><a href="support.html#guides">Centrum wsparcia</a></li>
+                    <li><a href="support.html#contact">Kontakt</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="search-container">
+            <label for="search" class="visually-hidden">Szukaj</label>
+            <input type="search" id="search" placeholder="Szukaj gier..." />
+            <button type="button">OK</button>
+          </div>
+          <div class="theme-switch">
+            <input type="checkbox" id="theme-toggle">
+            <label class="slider" for="theme-toggle" aria-label="Przełącz tryb kontrastu"></label>
+          </div>
+        </div>
+      </header>
+  
+  <main class="support-container">
+    <section class="support-hero">
+      <h1>Centrum Wsparcia</h1>
+      <div class="search-container">
+        <input type="search" placeholder="Wpisz pytanie lub słowo kluczowe...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </section>
+
+    <section class="popular-topics">
+      <h2>Popularne tematy</h2>
+      <div class="topic-grid">
+        <a href="#" class="topic-card">
+          <i class="fas fa-shopping-cart"></i>
+          <h3>Problemy z zakupem</h3>
+        </a>
+        <a href="#" class="topic-card">
+          <i class="fas fa-download"></i>
+          <h3>Pobieranie gier</h3>
+        </a>
+        <a href="#" class="topic-card">
+          <i class="fas fa-key"></i>
+          <h3>Aktywacja produktu</h3>
+        </a>
+      </div>
+    </section>
+
+    <section class="help-categories" id="guides">
+      <h2>Kategorie pomocy</h2>
+      <div class="category-grid">
+        <div class="category-card">
+          <h3><i class="fas fa-user"></i> Konto</h3>
+          <ul>
+            <li><a href="#">Rejestracja konta</a></li>
+            <li><a href="#">Zmiana hasła</a></li>
+          </ul>
+        </div>
+        <div class="category-card">
+          <h3><i class="fas fa-credit-card"></i> Płatności</h3>
+          <ul>
+            <li><a href="#">Metody płatności</a></li>
+            <li><a href="#">Zwroty</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-form" id="contact">
+      <h2>Skontaktuj się z nami</h2>
+      <form>
+        <div class="form-group">
+          <label for="email">Twój email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Wiadomość</label>
+          <textarea id="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Wyślij</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Stopka (identyczna jak w index.html) -->
+  <script src="script.js"></script>
+</body>
+</html>

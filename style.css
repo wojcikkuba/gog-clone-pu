@@ -20,11 +20,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: background-color 0.3s ease, 
+             color 0.3s ease, 
+             border-color 0.3s ease;
 }
 body {
   background: var(--bg-secondary);
   color: var(--text-primary);
   transition: background 0.3s, color 0.3s;
+}
+body:not([data-theme="dark"]) {
+  --bg-primary: #ffffff !important;
+  --bg-secondary: #f2f2f2 !important;
+  --text-primary: #333333 !important;
+  --header-bg: #2c2c2c !important;
 }
 a {
   text-decoration: none;
@@ -405,6 +414,13 @@ header:hover ~ .menu-overlay {
     width: 100%;
   }
 }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #e6e6e6;
+  }
+}
 
 /* Przycisk przełączania trybu */
 .theme-switch {
@@ -466,4 +482,103 @@ input:checked + .slider:before {
 
 [data-theme="dark"] .footer-column a {
   color: #a0a0a0;
+}
+[data-theme="dark"] .newsletter {
+  background: #333333;
+}
+/* Support Page Styles */
+.support-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.support-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.support-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.topic-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--text-primary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.topic-card:hover {
+  transform: translateY(-5px);
+}
+
+.topic-card i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.category-card {
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.category-card h3 {
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.contact-form {
+  margin-top: 3rem;
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--text-primary);
+  border-radius: 4px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .topic-card,
+[data-theme="dark"] .category-card {
+  border-color: #404040;
+}
+
+@media (max-width: 768px) {
+  .support-container {
+    padding: 1rem;
+  }
 }
