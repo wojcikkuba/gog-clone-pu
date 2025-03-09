@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Atrapa strony GOG – Testy dostępności</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- LINK DO POMINIĘCIA NAWIGACJI -->
+  <a class="skip-link" href="#maincontent">Pomiń nawigację i przejdź do treści głównej</a>
+
+  <!-- NAGŁÓWEK -->
+  <header>
+    <div class="top-bar">
+      <div class="logo" aria-label="GOG Logo">GOG Atrapa</div>
+      <nav aria-label="Główna nawigacja">
+        <ul>
+          <!-- Rozwijane menu dla "Sklep" -->
+          <li class="has-dropdown">
+            <a href="#">Sklep</a>
+            <div class="dropdown">
+              <ul>
+                <li><a href="#">Sklep 1</a></li>
+                <li><a href="#">Sklep 2</a></li>
+                <li><a href="#">Sklep 3</a></li>
+              </ul>
+            </div>
+          </li>
+          <!-- Rozwijane menu dla "Nowości" -->
+          <li class="has-dropdown">
+            <a href="#">Nowości</a>
+            <div class="dropdown">
+              <ul>
+                <li><a href="#">Nowość 1</a></li>
+                <li><a href="#">Nowość 2</a></li>
+                <li><a href="#">Nowość 3</a></li>
+              </ul>
+            </div>
+          </li>
+          <!-- Rozwijane menu dla "Promocje" -->
+          <li class="has-dropdown">
+            <a href="#">Promocje</a>
+            <div class="dropdown">
+              <ul>
+                <li><a href="#">Promocja 1</a></li>
+                <li><a href="#">Promocja 2</a></li>
+                <li><a href="#">Promocja 3</a></li>
+              </ul>
+            </div>
+          </li>
+          <!-- Rozwijane menu dla "Kolekcja" -->
+          <li class="has-dropdown">
+            <a href="#">Kolekcja</a>
+            <div class="dropdown">
+              <ul>
+                <li><a href="#">Kolekcja 1</a></li>
+                <li><a href="#">Kolekcja 2</a></li>
+                <li><a href="#">Kolekcja 3</a></li>
+              </ul>
+            </div>
+          </li>
+          <!-- Rozwijane menu dla "Wsparcie" -->
+          <li class="has-dropdown">
+            <a href="#">Wsparcie</a>
+            <div class="dropdown">
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Centrum wsparcia</a></li>
+                <li><a href="#">Kontakt</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="search-container">
+        <label for="search" class="visually-hidden">Szukaj</label>
+        <input type="search" id="search" placeholder="Szukaj gier..." />
+        <button type="button">OK</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- OVERLAY – stopniowe przyciemnienie tła przy hoverze na menu -->
+  <div class="menu-overlay"></div>
+
+  <!-- DUŻY BANER (HERO) -->
+  <section class="hero" aria-label="Baner promocyjny">
+    <div class="hero-content">
+      <h1>Witaj w GOG</h1>
+      <p>Odkryj świat gier bez DRM i bez ograniczeń.</p>
+      <button>Przeglądaj ofertę</button>
+    </div>
+  </section>
+
+  <!-- GŁÓWNA ZAWARTOŚĆ STRONY -->
+  <main id="maincontent">
+    <!-- SEKCJA PROMOCJE / WYBRANE GRY -->
+    <section class="promotions" aria-labelledby="promotions-title">
+      <h2 id="promotions-title">Aktualne promocje</h2>
+      <div class="promo-grid">
+        <div class="promo-item">
+          <img src="https://via.placeholder.com/300x200?text=Gra+1" alt="Okładka gry 1" />
+          <h3>Gra 1</h3>
+          <span class="discount">-50%</span>
+          <p>Krótki opis gry 1.</p>
+          <button>Dodaj do koszyka</button>
+        </div>
+        <div class="promo-item">
+          <img src="https://via.placeholder.com/300x200?text=Gra+2" alt="Okładka gry 2" />
+          <h3>Gra 2</h3>
+          <span class="discount">-30%</span>
+          <p>Krótki opis gry 2.</p>
+          <button>Dodaj do koszyka</button>
+        </div>
+        <div class="promo-item">
+          <img src="https://via.placeholder.com/300x200?text=Gra+3" alt="Okładka gry 3" />
+          <h3>Gra 3</h3>
+          <span class="discount">-70%</span>
+          <p>Krótki opis gry 3.</p>
+          <button>Dodaj do koszyka</button>
+        </div>
+        <div class="promo-item">
+          <img src="https://via.placeholder.com/300x200?text=Gra+4" alt="Okładka gry 4" />
+          <h3>Gra 4</h3>
+          <span class="discount">-20%</span>
+          <p>Krótki opis gry 4.</p>
+          <button>Dodaj do koszyka</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEKCJA TOP SELLERS / NOWOŚCI -->
+    <section class="games-section" aria-labelledby="topsellers-title">
+      <h2 id="topsellers-title">Najlepiej sprzedające się</h2>
+      <div class="games-list">
+        <article class="game-card">
+          <img src="https://via.placeholder.com/250x150?text=Gra+5" alt="Okładka gry 5" />
+          <h3>Gra 5</h3>
+          <p>Opis gry 5.</p>
+          <div class="price">59,99 zł</div>
+          <button>Kup teraz</button>
+        </article>
+        <article class="game-card">
+          <img src="https://via.placeholder.com/250x150?text=Gra+6" alt="Okładka gry 6" />
+          <h3>Gra 6</h3>
+          <p>Opis gry 6.</p>
+          <div class="price">49,99 zł</div>
+          <button>Kup teraz</button>
+        </article>
+        <article class="game-card">
+          <img src="https://via.placeholder.com/250x150?text=Gra+7" alt="Okładka gry 7" />
+          <h3>Gra 7</h3>
+          <p>Opis gry 7.</p>
+          <div class="price">39,99 zł</div>
+          <button>Kup teraz</button>
+        </article>
+        <article class="game-card">
+          <img src="https://via.placeholder.com/250x150?text=Gra+8" alt="Okładka gry 8" />
+          <h3>Gra 8</h3>
+          <p>Opis gry 8.</p>
+          <div class="price">79,99 zł</div>
+          <button>Kup teraz</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="games-section" aria-labelledby="newgames-title">
+      <h2 id="newgames-title">Nowości</h2>
+      <div class="games-list">
+        <article class="game-card">
+          <img src="https://via.placeholder.com/250x150?text=Gra+9" alt="Okładka gry 9" />
+          <h3>Gra 9</h3>
+          <p>Opis gry 9.</p>
+          <div class="price">89,99 zł</div>
+          <button>Kup teraz</button>
+        </article>
+        <article class="game-card">
+          <img src="https://via.placeholder.com/250x150?text=Gra+10" alt="Okładka gry 10" />
+          <h3>Gra 10</h3>
+          <p>Opis gry 10.</p>
+          <div class="price">99,99 zł</div>
+          <button>Kup teraz</button>
+        </article>
+        <article class="game-card">
+          <img src="https://via.placeholder.com/250x150?text=Gra+11" alt="Okładka gry 11" />
+          <h3>Gra 11</h3>
+          <p>Opis gry 11.</p>
+          <div class="price">59,99 zł</div>
+          <button>Kup teraz</button>
+        </article>
+        <article class="game-card">
+          <img src="https://via.placeholder.com/250x150?text=Gra+12" alt="Okładka gry 12" />
+          <h3>Gra 12</h3>
+          <p>Opis gry 12.</p>
+          <div class="price">45,99 zł</div>
+          <button>Kup teraz</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- SEKCJA NEWSLETTER -->
+  <section class="newsletter" aria-label="Zapisz się do newslettera">
+    <h2>Chcesz być na bieżąco?</h2>
+    <p>Zapisz się do newslettera i otrzymuj informacje o promocjach i nowościach.</p>
+    <form action="#" method="post">
+      <label for="newsletter-email" class="visually-hidden">Adres e-mail</label>
+      <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Twój e-mail" aria-required="true" />
+      <button type="submit">Zapisz się</button>
+    </form>
+  </section>
+
+  <!-- STOPKA -->
+  <footer>
+    <div class="footer-main">
+      <div class="footer-logo">
+        <img src="https://via.placeholder.com/100x40?text=GOG+Logo" alt="GOG.com" />
+      </div>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h3>O nas</h3>
+          <ul>
+            <li><a href="#">O GOG</a></li>
+            <li><a href="#">Kariery</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Społeczność</h3>
+          <ul>
+            <li><a href="#">Forum</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Pomoc</h3>
+          <ul>
+            <li><a href="#">Centrum wsparcia</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Zgłoś problem</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Informacje prawne</h3>
+          <ul>
+            <li><a href="#">Regulamin</a></li>
+            <li><a href="#">Polityka prywatności</a></li>
+            <li><a href="#">Zasady społeczności</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 GOG sp. z o.o. Wszelkie prawa zastrzeżone.</p>
+      <p>Wszystkie znaki towarowe i zastrzeżone nazwy stanowią własność ich prawowitych właścicieli.</p>
+    </div>
+  </footer>
+</body>
+</html>
+ 
