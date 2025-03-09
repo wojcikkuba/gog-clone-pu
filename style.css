@@ -24,11 +24,12 @@
              color 0.3s ease, 
              border-color 0.3s ease;
 }
+
 body {
   background: var(--bg-secondary);
   color: var(--text-primary);
-  transition: background 0.3s, color 0.3s;
 }
+
 body:not([data-theme="dark"]) {
   --bg-primary: #ffffff !important;
   --bg-secondary: #f2f2f2 !important;
@@ -600,4 +601,29 @@ input:checked + .slider:before {
 
 [data-theme="dark"] .top-bar .logo a {
   color: #fff;
+}
+
+/* Dodaj do style.css */
+.font-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.font-controls button {
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.font-controls button:hover {
+  opacity: 0.9;
+}
+
+[data-theme="dark"] .font-controls button {
+  background: var(--button-bg);
 }

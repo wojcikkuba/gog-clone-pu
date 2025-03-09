@@ -1,26 +1,43 @@
-// Obsługa przełącznika
-const themeToggle = document.getElementById('theme-toggle');
-const htmlElement = document.documentElement;
+// POPRAWIONA SKŁADNIA I LOGIKA
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggle = document.getElementById("theme-toggle");
+  const htmlElement = document.documentElement;
+  const fontSizeKeys = { min: 100, max: 200, step: 25 };
+  const root = document.documentElement;
 
-// Sprawdź zapisaną preferencję
-const savedTheme = localStorage.getItem('theme') || 
-  (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  const updateFontSize = (size) => {
+    root.style.fontSize = `${size}%`;
+    localStorage.setItem("fontSize", size);
+  };
 
-  if(savedTheme === 'dark') {
-    htmlElement.setAttribute('data-theme', 'dark');
-    themeToggle.checked = true;
-  } else {
-    htmlElement.removeAttribute('data-theme'); // Dodano czyszczenie atrybutu
-    themeToggle.checked = false; // Dodano wymuszenie stanu przełącznika
-  }
+  const currentSize = parseInt(localStorage.getItem("fontSize")) || 100;
+  updateFontSize(currentSize);
 
-// Dodaj obsługę kliknięcia
-themeToggle.addEventListener('change', function() {
-    if(this.checked) {
-      htmlElement.setAttribute('data-theme', 'dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      htmlElement.removeAttribute('data-theme');
-      localStorage.setItem('theme', 'light');
-    }
+  document.getElementById('font-increase').addEventListener('click', () => {
+    const newSize = Math.min(fontSizeKeys.max, currentSize + fontSizeKeys.step);
+    if(newSize !== currentSize) updateFontSize(newSize);
+  });
+
+  document.getElementById('font-reset').addEventListener('click', () => {
+    updateFontSize(100);
+  });
+
+  const savedTheme =
+    localStorage.getItem("theme") ||
+    (window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light");
+
+  const applyTheme = (isDark) => {
+    htmlElement.classList.toggle("dark-theme", isDark);
+    themeToggle.checked = isDark;
+  };
+
+  applyTheme(savedTheme === "dark");
+
+  themeToggle.addEventListener("change", (e) => {
+    const isDark = e.target.checked;
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    applyTheme(isDark);
+  });
 });
