@@ -582,3 +582,22 @@ input:checked + .slider:before {
     padding: 1rem;
   }
 }
+.top-bar .logo a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  display: block;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 2rem;
+}
+
+.top-bar .logo a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+[data-theme="dark"] .top-bar .logo a {
+  color: #fff;
+}
