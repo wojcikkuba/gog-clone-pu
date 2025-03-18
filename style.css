@@ -38,15 +38,17 @@
     background: var(--bg-secondary);
     color: var(--text-primary);
   }
-  
+
+  /*
   body:not([data-theme="dark"]) {
-    /* Wymuszenie kolorów jasnego motywu */
+    // Wymuszenie kolorów jasnego motywu
     --bg-primary: #ffffff !important;
     --bg-secondary: #f2f2f2 !important;
     --text-primary: #333333 !important;
     --header-bg: #2c2c2c !important;
   }
-  
+  */
+
   a {
     text-decoration: none;
     color: inherit;
@@ -408,6 +410,17 @@
     cursor: pointer;
     font-weight: bold;
   }
+
+  [data-theme="dark"] .newsletter {
+    background: #333333;
+    color: #e6e6e6;
+  }
+  
+  [data-theme="dark"] .newsletter input[type="email"] {
+    background: #1a1a1a;
+    color: #e6e6e6;
+    border-color: #404040;
+  }
   
   /* ======================================
      STOPKA
@@ -488,7 +501,7 @@
   }
   
   header:hover ~ .menu-overlay {
-    opacity: 1;
+    /*opacity: 1;*/
     pointer-events: auto;
   }
   

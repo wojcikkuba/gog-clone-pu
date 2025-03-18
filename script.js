@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       : "light");
 
   const applyTheme = (isDark) => {
-    htmlElement.classList.toggle("dark-theme", isDark);
+    htmlElement.setAttribute("data-theme", isDark ? "dark" : "light");
     themeToggle.checked = isDark;
   };
 
