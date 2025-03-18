@@ -2,7 +2,7 @@
    ZMIENNE I PODSTAWOWE USTAWIENIA
    ====================================== */
 
-   :root {
+:root {
     /* Kolory dla trybu jasnego */
     --bg-primary: #ffffff;
     --bg-secondary: #f2f2f2;
@@ -10,36 +10,36 @@
     --accent-color: #7d43ff;
     --header-bg: #2c2c2c;
     --button-bg: #2c2c2c;
-  }
-  
-  [data-theme="dark"] {
+}
+
+[data-theme="dark"] {
     /* Kolory dla trybu ciemnego */
     --bg-primary: #1a1a1a;
     --bg-secondary: #2d2d2d;
     --text-primary: #e6e6e6;
     --header-bg: #121212;
     --button-bg: #7d43ff;
-  }
-  
-  /* ======================================
+}
+
+/* ======================================
      RESET I PODSTAWOWE STYLE
      ====================================== */
-  
-  * {
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     transition: background-color 0.3s ease,
-                color 0.3s ease,
-                border-color 0.3s ease;
-  }
-  
-  body {
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+body {
     background: var(--bg-secondary);
     color: var(--text-primary);
-  }
+}
 
-  /*
+/*
   body:not([data-theme="dark"]) {
     // Wymuszenie kolorów jasnego motywu
     --bg-primary: #ffffff !important;
@@ -49,22 +49,22 @@
   }
   */
 
-  a {
+a {
     text-decoration: none;
     color: inherit;
-  }
-  
-  img {
+}
+
+img {
     max-width: 100%;
     display: block;
-  }
-  
-  /* ======================================
+}
+
+/* ======================================
      DOSTĘPNOŚĆ
      ====================================== */
-  
-  /* Link do pominięcia nawigacji dla czytników ekranowych */
-  .skip-link {
+
+/* Link do pominięcia nawigacji dla czytników ekranowych */
+.skip-link {
     position: absolute;
     top: -40px;
     left: 0;
@@ -72,36 +72,36 @@
     color: #fff;
     padding: 8px;
     z-index: 100;
-  }
-  
-  .skip-link:focus {
+}
+
+.skip-link:focus {
     top: 0;
-  }
-  
-  /* ======================================
+}
+
+/* ======================================
      NAGŁÓWEK I NAWIGACJA
      ====================================== */
-  
-  header {
+
+header {
     background: var(--header-bg);
     color: #fff;
     padding: 10px 20px;
     position: relative;
     z-index: 1000;
-  }
-  
-  .top-bar {
+}
+
+.top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .top-bar .logo {
+}
+
+.top-bar .logo {
     font-size: 1.5rem;
     font-weight: bold;
-  }
-  
-  .top-bar .logo a {
+}
+
+.top-bar .logo a {
     color: inherit;
     text-decoration: none;
     transition: opacity 0.3s ease;
@@ -110,37 +110,37 @@
     font-size: 1.5rem;
     font-weight: bold;
     margin-right: 2rem;
-  }
-  
-  .top-bar .logo a:hover {
+}
+
+.top-bar .logo a:hover {
     opacity: 0.8;
     text-decoration: underline;
-  }
-  
-  [data-theme="dark"] .top-bar .logo a {
+}
+
+[data-theme="dark"] .top-bar .logo a {
     color: #fff;
-  }
-  
-  /* Menu nawigacyjne */
-  .top-bar nav ul {
+}
+
+/* Menu nawigacyjne */
+.top-bar nav ul {
     list-style: none;
     display: flex;
     gap: 1rem;
-  }
-  
-  .top-bar nav ul li {
+}
+
+.top-bar nav ul li {
     position: relative;
-  }
-  
-  .top-bar nav a {
+}
+
+.top-bar nav a {
     color: #fff;
     font-weight: 600;
     padding: 5px 10px;
     display: block;
-  }
-  
-  /* Rozwijane menu dla każdej zakładki */
-  li.has-dropdown .dropdown {
+}
+
+/* Rozwijane menu dla każdej zakładki */
+li.has-dropdown .dropdown {
     display: none;
     position: absolute;
     top: 100%;
@@ -151,51 +151,51 @@
     min-width: 180px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     z-index: 1100;
-  }
-  
-  li.has-dropdown:hover .dropdown {
+}
+
+li.has-dropdown:hover .dropdown {
     display: block;
-  }
-  
-  li.has-dropdown .dropdown ul {
+}
+
+li.has-dropdown .dropdown ul {
     list-style: none;
-  }
-  
-  li.has-dropdown .dropdown ul li {
+}
+
+li.has-dropdown .dropdown ul li {
     margin-bottom: 5px;
-  }
-  
-  li.has-dropdown .dropdown ul li a {
+}
+
+li.has-dropdown .dropdown ul li a {
     padding: 5px 10px;
     color: #333;
     display: block;
-  }
-  
-  li.has-dropdown .dropdown ul li a:hover {
+}
+
+li.has-dropdown .dropdown ul li a:hover {
     background: #f2f2f2;
-  }
-  
-  /* Pole wyszukiwania */
-  .search-container {
+}
+
+/* Pole wyszukiwania */
+.search-container {
     margin-left: 2rem;
     position: relative;
-  }
-  
-  .search-container input[type="search"] {
+}
+
+.search-container input[type="search"] {
     padding: 8px 40px 8px 15px;
     border-radius: 25px;
     border: 1px solid #ccc;
     background: #fff;
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
     outline: none;
-  }
-  
-  .search-container input[type="search"]:focus {
+}
+
+.search-container input[type="search"]:focus {
     border-color: #7d43ff;
     box-shadow: 0 0 8px rgba(125, 67, 255, 0.4);
-  }
-  
-  .search-container button {
+}
+
+.search-container button {
     position: absolute;
     right: 5px;
     top: 50%;
@@ -207,40 +207,39 @@
     border-radius: 20px;
     cursor: pointer;
     transition: background 0.3s ease;
-  }
-  
-  .search-container button:hover {
+}
+
+.search-container button:hover {
     background: #5e2ccc;
-  }
-  
-  /* ======================================
+}
+
+/* ======================================
      SEKCJA HERO
      ====================================== */
-  
-  .hero {
+
+.hero {
     position: relative;
-    background: url("https://via.placeholder.com/1200x400/333/fff?text=GOG+Banner")
-      no-repeat center center/cover;
+    background: url("https://via.placeholder.com/1200x400/333/fff?text=GOG+Banner") no-repeat center center/cover;
     height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
     text-align: center;
-  }
-  
-  .hero-content {
+}
+
+.hero-content {
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 8px;
-  }
-  
-  .hero h1 {
+}
+
+.hero h1 {
     font-size: 2rem;
     margin-bottom: 10px;
-  }
-  
-  .hero button {
+}
+
+.hero button {
     background: #7d43ff;
     color: #fff;
     padding: 10px 20px;
@@ -249,48 +248,48 @@
     cursor: pointer;
     font-weight: bold;
     font-size: 1rem;
-  }
-  
-  /* ======================================
+}
+
+/* ======================================
      GŁÓWNA ZAWARTOŚĆ
      ====================================== */
-  
-  main {
+
+main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     background: var(--bg-primary);
-  }
-  
-  /* ======================================
+}
+
+/* ======================================
      SEKCJA PROMOCJI
      ====================================== */
-  
-  .promotions {
+
+.promotions {
     margin-bottom: 40px;
-  }
-  
-  .promotions h2 {
+}
+
+.promotions h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
-  }
-  
-  .promo-grid {
+}
+
+.promo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
-  }
-  
-  .promo-item {
+}
+
+.promo-item {
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 10px;
     text-align: center;
     background: #fafafa;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .promo-item .discount {
+}
+
+.promo-item .discount {
     background: #7d43ff;
     color: #fff;
     display: inline-block;
@@ -298,9 +297,9 @@
     border-radius: 4px;
     margin: 10px 0;
     font-weight: bold;
-  }
-  
-  .promo-item button {
+}
+
+.promo-item button {
     background: #2c2c2c;
     color: #fff;
     padding: 8px 16px;
@@ -309,28 +308,28 @@
     cursor: pointer;
     font-weight: bold;
     margin-top: 10px;
-  }
-  
-  /* ======================================
+}
+
+/* ======================================
      SEKCJA GIER
      ====================================== */
-  
-  .games-section {
+
+.games-section {
     margin-bottom: 40px;
-  }
-  
-  .games-section h2 {
+}
+
+.games-section h2 {
     font-size: 1.8rem;
     margin-bottom: 20px;
-  }
-  
-  .games-list {
+}
+
+.games-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-  }
-  
-  .game-card {
+}
+
+.game-card {
     background: #fafafa;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -338,24 +337,24 @@
     padding: 10px;
     box-sizing: border-box;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .game-card h3 {
+}
+
+.game-card h3 {
     font-size: 1rem;
     margin: 10px 0;
-  }
-  
-  .game-card p {
+}
+
+.game-card p {
     font-size: 0.9rem;
     margin-bottom: 10px;
-  }
-  
-  .game-card .price {
+}
+
+.game-card .price {
     font-weight: bold;
     margin-bottom: 10px;
-  }
-  
-  .game-card button {
+}
+
+.game-card button {
     background: #7d43ff;
     color: #fff;
     padding: 6px 12px;
@@ -364,44 +363,44 @@
     cursor: pointer;
     font-weight: bold;
     font-size: 0.9rem;
-  }
-  
-  /* ======================================
+}
+
+/* ======================================
      SEKCJA NEWSLETTER
      ====================================== */
-  
-  .newsletter {
+
+.newsletter {
     background: #e2e2e2;
     padding: 20px;
     margin-bottom: 40px;
     text-align: center;
     border-radius: 4px;
-  }
-  
-  .newsletter h2 {
+}
+
+.newsletter h2 {
     font-size: 1.6rem;
     margin-bottom: 10px;
-  }
-  
-  .newsletter p {
+}
+
+.newsletter p {
     margin-bottom: 10px;
-  }
-  
-  .newsletter form {
+}
+
+.newsletter form {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
-  }
-  
-  .newsletter input[type="email"] {
+}
+
+.newsletter input[type="email"] {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     width: 250px;
-  }
-  
-  .newsletter button {
+}
+
+.newsletter button {
     background: var(--button-bg);
     color: #fff;
     padding: 8px 16px;
@@ -409,85 +408,85 @@
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
-  }
+}
 
-  [data-theme="dark"] .newsletter {
+[data-theme="dark"] .newsletter {
     background: #333333;
     color: #e6e6e6;
-  }
-  
-  [data-theme="dark"] .newsletter input[type="email"] {
+}
+
+[data-theme="dark"] .newsletter input[type="email"] {
     background: #1a1a1a;
     color: #e6e6e6;
     border-color: #404040;
-  }
-  
-  /* ======================================
+}
+
+/* ======================================
      STOPKA
      ====================================== */
-  
-  footer {
+
+footer {
     background: var(--header-bg);
     color: #fff;
     padding: 20px;
-  }
-  
-  .footer-main {
+}
+
+.footer-main {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
     margin-bottom: 20px;
-  }
-  
-  .footer-logo {
+}
+
+.footer-logo {
     flex: 1 1 100%;
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  .footer-links {
+}
+
+.footer-links {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
     flex: 1 1 100%;
     justify-content: center;
-  }
-  
-  .footer-column {
+}
+
+.footer-column {
     min-width: 150px;
-  }
-  
-  .footer-column h3 {
+}
+
+.footer-column h3 {
     font-size: 1rem;
     margin-bottom: 10px;
     text-transform: uppercase;
-  }
-  
-  .footer-column ul {
+}
+
+.footer-column ul {
     list-style: none;
-  }
-  
-  .footer-column li {
+}
+
+.footer-column li {
     margin-bottom: 6px;
-  }
-  
-  .footer-column a {
+}
+
+.footer-column a {
     color: #ccc;
     font-size: 0.9rem;
-  }
-  
-  .footer-bottom {
+}
+
+.footer-bottom {
     text-align: center;
     font-size: 0.85rem;
     color: #aaa;
-  }
-  
-  /* ======================================
+}
+
+/* ======================================
      EFEKTY I NAKŁADKI
      ====================================== */
-  
-  /* Overlay dla menu */
-  .menu-overlay {
+
+/* Overlay dla menu */
+.menu-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -498,31 +497,31 @@
     transition: opacity 0.4s ease;
     pointer-events: none;
     z-index: 900;
-  }
-  
-  header:hover ~ .menu-overlay {
+}
+
+header:hover~.menu-overlay {
     /*opacity: 1;*/
     pointer-events: auto;
-  }
-  
-  /* ======================================
+}
+
+/* ======================================
      PRZEŁĄCZNIK MOTYWU
      ====================================== */
-  
-  .theme-switch {
+
+.theme-switch {
     position: relative;
     display: inline-block;
     width: 60px;
     height: 30px;
-  }
-  
-  .theme-switch input {
+}
+
+.theme-switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  .slider {
+}
+
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -532,9 +531,9 @@
     background: #ccc;
     transition: 0.4s;
     border-radius: 34px;
-  }
-  
-  .slider:before {
+}
+
+.slider:before {
     position: absolute;
     content: "🌙";
     height: 22px;
@@ -548,28 +547,28 @@
     align-items: center;
     justify-content: center;
     font-size: 12px;
-  }
-  
-  input:checked + .slider {
+}
+
+input:checked+.slider {
     background: var(--accent-color);
-  }
-  
-  input:checked + .slider:before {
+}
+
+input:checked+.slider:before {
     content: "☀️";
     transform: translateX(30px);
-  }
-  
-  /* ======================================
+}
+
+/* ======================================
      KONTROLA ROZMIARU CZCIONKI
      ====================================== */
-  
-  .font-controls {
+
+.font-controls {
     display: flex;
     gap: 0.5rem;
     margin-top: 1rem;
-  }
-  
-  .font-controls button {
+}
+
+.font-controls button {
     background: var(--accent-color);
     color: #fff;
     border: none;
@@ -577,174 +576,190 @@
     border-radius: 4px;
     cursor: pointer;
     transition: opacity 0.3s ease;
-  }
-  
-  .font-controls button:hover {
+}
+
+.font-controls button:hover {
     opacity: 0.9;
-  }
-  
-  [data-theme="dark"] .font-controls button {
+}
+
+[data-theme="dark"] .font-controls button {
     background: var(--button-bg);
-  }
-  
-  /* ======================================
+}
+
+/* ======================================
      STRONA WSPARCIA
      ====================================== */
-  
-  .support-container {
+
+.support-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
-  }
-  
-  .support-hero {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.support-hero {
     text-align: center;
     margin-bottom: 3rem;
-  }
-  
-  .support-hero h1 {
+}
+
+.support-hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-  }
-  
-  .topic-grid {
+}
+
+.topic-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
     margin-bottom: 3rem;
-  }
-  
-  .topic-card {
+}
+
+.topic-card {
     background: var(--bg-primary);
     border: 1px solid var(--text-primary);
     padding: 1.5rem;
     border-radius: 8px;
     text-align: center;
     transition: transform 0.3s ease;
-  }
-  
-  .topic-card:hover {
+}
+
+.topic-card:hover {
     transform: translateY(-5px);
-  }
-  
-  .topic-card i {
+}
+
+.topic-card i {
     font-size: 2rem;
     margin-bottom: 1rem;
-  }
-  
-  .category-grid {
+}
+
+.category-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-  }
-  
-  .category-card {
+}
+
+.category-card {
     background: var(--bg-secondary);
     padding: 1.5rem;
     border-radius: 8px;
-  }
-  
-  .category-card h3 {
+}
+
+.category-card h3 {
     margin-bottom: 1rem;
     color: var(--accent-color);
-  }
-  
-  .contact-form {
+}
+
+.contact-form {
     margin-top: 3rem;
     background: var(--bg-secondary);
     padding: 2rem;
     border-radius: 8px;
-  }
-  
-  .form-group {
+}
+
+.form-group {
     margin-bottom: 1.5rem;
-  }
-  
-  .form-group label {
+}
+
+.form-group label {
     display: block;
     margin-bottom: 0.5rem;
-  }
-  
-  .form-group input,
-  .form-group textarea {
+}
+
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 0.8rem;
     border: 1px solid var(--text-primary);
     border-radius: 4px;
     background: var(--bg-primary);
     color: var(--text-primary);
-  }
-  
-  /* Dostosowanie dla trybu ciemnego */
-  [data-theme="dark"] .topic-card,
-  [data-theme="dark"] .category-card {
+}
+
+.topic-card,
+.category-card,
+.contact-form {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--text-primary);
+}
+
+/* Dostosowanie dla trybu ciemnego */
+[data-theme="dark"] .topic-card,
+[data-theme="dark"] .category-card {
     border-color: #404040;
-  }
-  
-  [data-theme="dark"] .game-card,
-  [data-theme="dark"] .promo-item {
+}
+
+[data-theme="dark"] .game-card,
+[data-theme="dark"] .promo-item {
     border-color: #404040;
     background: var(--bg-secondary);
-  }
-  
-  [data-theme="dark"] .footer-column a {
+}
+
+[data-theme="dark"] .footer-column a {
     color: #a0a0a0;
-  }
-  
-  [data-theme="dark"] .newsletter {
+}
+
+[data-theme="dark"] .newsletter {
     background: #333333;
-  }
-  
-  /* ======================================
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border-color: #404040;
+}
+
+/* ======================================
      MEDIA QUERIES - RESPONSYWNOŚĆ
      ====================================== */
-  
-  @media (prefers-color-scheme: dark) {
+
+@media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg-primary: #1a1a1a;
-      --bg-secondary: #2d2d2d;
-      --text-primary: #e6e6e6;
+        --bg-primary: #1a1a1a;
+        --bg-secondary: #2d2d2d;
+        --text-primary: #e6e6e6;
     }
-  }
-  
-  @media (max-width: 992px) {
+}
+
+@media (max-width: 992px) {
     .search-container {
-      display: none;
+        display: none;
     }
-  
+
     .game-card {
-      width: calc(33.333% - 20px);
+        width: calc(33.333% - 20px);
     }
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .promo-grid {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
-  
+
     .game-card {
-      width: calc(50% - 20px);
+        width: calc(50% - 20px);
     }
-  
+
     .footer-links {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-  
+
     .support-container {
-      padding: 1rem;
+        padding: 1rem;
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .top-bar {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
     }
-  
+
     .game-card {
-      width: 100%;
+        width: 100%;
     }
-  }
-  
+}
