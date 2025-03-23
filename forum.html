@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GOG Community</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-    </style>
+    <!-- Czcionka Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    />
   </head>
   <body>
     <!-- LINK DO POMINIĘCIA NAWIGACJI -->
@@ -102,107 +104,106 @@
     <div class="menu-overlay"></div>
 
     <!-- GŁÓWNA ZAWARTOŚĆ STRONY -->
-    <main id="maincontent" style="max-width:1200px; margin:0 auto; padding:20px;">
-
-      <!-- Trzy kolumny forum -->
-      <div class="community-layout" style="display:grid; grid-template-columns:1fr 2fr 1fr; gap:20px;">
-
+    <main id="maincontent">
+      <!-- Layout forum: 3 kolumny -->
+      <div class="community-layout">
         <!-- Lewa kolumna -->
-        <aside class="community-sidebar" style="background:var(--bg-primary); padding:20px; border-radius:4px;">
-          <h2 style="margin-bottom:10px;">General Forums</h2>
-          <ul style="list-style:none; margin-left:0;">
-            <li style="margin-bottom:8px;">
-              <img src="images/logo.png" alt="Forum Icon" style="width:25px; vertical-align:middle; margin-right:5px;">
+        <aside class="community-sidebar">
+          <h2>General Forums</h2>
+          <ul class="forum-list">
+            <li>
+              <img src="images/logo.png" alt="Forum Icon" class="forum-icon">
               <a href="#">Community Wishlist</a>
-              <span style="color:#999; font-size:0.8rem;">- 1234 topics</span>
+              <span class="forum-stats">- 1234 topics</span>
             </li>
-            <li style="margin-bottom:8px;">
-              <img src="images/logo.png" alt="Forum Icon" style="width:25px; vertical-align:middle; margin-right:5px;">
+            <li>
+              <img src="images/logo.png" alt="Forum Icon" class="forum-icon">
               <a href="#">General Discussion</a>
-              <span style="color:#999; font-size:0.8rem;">- 5678 topics</span>
+              <span class="forum-stats">- 5678 topics</span>
             </li>
-            <li style="margin-bottom:8px;">
-              <img src="images/logo.png" alt="Forum Icon" style="width:25px; vertical-align:middle; margin-right:5px;">
+            <li>
+              <img src="images/logo.png" alt="Forum Icon" class="forum-icon">
               <a href="#">Announcements</a>
-              <span style="color:#999; font-size:0.8rem;">- 34 topics</span>
+              <span class="forum-stats">- 34 topics</span>
             </li>
-            <li style="margin-bottom:8px;">
-              <img src="images/logo.png" alt="Forum Icon" style="width:25px; vertical-align:middle; margin-right:5px;">
+            <li>
+              <img src="images/logo.png" alt="Forum Icon" class="forum-icon">
               <a href="#">Off-Topic</a>
-              <span style="color:#999; font-size:0.8rem;">- 999 topics</span>
+              <span class="forum-stats">- 999 topics</span>
             </li>
           </ul>
-          <h2 style="margin:20px 0 10px;">Game Specific Forums</h2>
-          <ul style="list-style:none; margin-left:0;">
-            <li style="margin-bottom:8px;">
-              <img src="images/logo.png" alt="Forum Icon" style="width:25px; vertical-align:middle; margin-right:5px;">
+          <h2>Game Specific Forums</h2>
+          <ul class="forum-list">
+            <li>
+              <img src="images/logo.png" alt="Forum Icon" class="forum-icon">
               <a href="#">Game A</a>
-              <span style="color:#999; font-size:0.8rem;">- 250 topics</span>
+              <span class="forum-stats">- 250 topics</span>
             </li>
-            <li style="margin-bottom:8px;">
-              <img src="images/logo.png" alt="Forum Icon" style="width:25px; vertical-align:middle; margin-right:5px;">
+            <li>
+              <img src="images/logo.png" alt="Forum Icon" class="forum-icon">
               <a href="#">Game B</a>
-              <span style="color:#999; font-size:0.8rem;">- 340 topics</span>
+              <span class="forum-stats">- 340 topics</span>
             </li>
-            <li style="margin-bottom:8px;">
-              <img src="images/logo.png" alt="Forum Icon" style="width:25px; vertical-align:middle; margin-right:5px;">
+            <li>
+              <img src="images/logo.png" alt="Forum Icon" class="forum-icon">
               <a href="#">Game C</a>
-              <span style="color:#999; font-size:0.8rem;">- 120 topics</span>
+              <span class="forum-stats">- 120 topics</span>
             </li>
-            <li style="margin-bottom:8px;">
-              <img src="images/logo.png" alt="Forum Icon" style="width:25px; vertical-align:middle; margin-right:5px;">
+            <li>
+              <img src="images/logo.png" alt="Forum Icon" class="forum-icon">
               <a href="#">Game D</a>
-              <span style="color:#999; font-size:0.8rem;">- 89 topics</span>
+              <span class="forum-stats">- 89 topics</span>
             </li>
           </ul>
-          <p style="margin-top:20px;"><a href="#" style="color:var(--accent-color); text-decoration:underline;">More at GOG Forums »</a></p>
+          <p class="more-forums">
+            <a href="#">More at GOG Forums »</a>
+          </p>
         </aside>
 
         <!-- Środkowa kolumna -->
-        <section class="community-main" style="background:var(--bg-primary); padding:20px; border-radius:4px;">
-          <!-- Community Wishlist highlight box -->
-          <div style="background:var(--bg-secondary); padding:15px; border-radius:4px; margin-bottom:20px;">
-            <h3 style="margin-bottom:10px;">Community Wishlist: this week's highlights</h3>
-            <ul style="list-style:none; margin-left:0; padding-left:0;">
-              <li style="margin-bottom:5px;"><a href="#" style="text-decoration:underline;">Suggestion: Add feature X</a></li>
-              <li style="margin-bottom:5px;"><a href="#" style="text-decoration:underline;">Idea: Another big update</a></li>
-              <li style="margin-bottom:5px;"><a href="#" style="text-decoration:underline;">Request: VR support</a></li>
+        <section class="community-main">
+          <div class="community-box">
+            <h3>Community Wishlist: this week's highlights</h3>
+            <ul class="highlight-list">
+              <li><a href="#">Suggestion: Add feature X</a></li>
+              <li><a href="#">Idea: Another big update</a></li>
+              <li><a href="#">Request: VR support</a></li>
             </ul>
-            <p><a href="#" style="text-decoration:underline; color:var(--accent-color);">Read more at GOG Forums »</a></p>
+            <p>
+              <a href="#" class="read-more">Read more at GOG Forums »</a>
+            </p>
           </div>
 
-          <!-- My favourite topics -->
-          <div style="background:var(--bg-secondary); padding:15px; border-radius:4px; margin-bottom:20px;">
-            <h3 style="margin-bottom:10px;">My favourite topics</h3>
-            <p>No favourite topics yet? <a href="#" style="text-decoration:underline; color:var(--accent-color);">Explore the forum!</a></p>
+          <div class="community-box">
+            <h3>My favourite topics</h3>
+            <p>No favourite topics yet? 
+              <a href="#" class="explore-forum">Explore the forum!</a>
+            </p>
           </div>
 
-          <!-- Topics I've posted in -->
-          <div style="background:var(--bg-secondary); padding:15px; border-radius:4px;">
-            <h3 style="margin-bottom:10px;">Topics I've posted in</h3>
+          <div class="community-box">
+            <h3>Topics I've posted in</h3>
             <p>You haven't posted in any conversations today.</p>
           </div>
         </section>
 
         <!-- Prawa kolumna -->
-        <aside class="community-right" style="background:var(--bg-primary); padding:20px; border-radius:4px;">
-          <!-- Tied this week -->
-          <div style="background:var(--bg-secondary); padding:15px; border-radius:4px; margin-bottom:20px;">
-            <h4 style="margin-bottom:10px;">Tied this week</h4>
-            <ul style="list-style:none; margin-left:0; padding-left:0;">
-              <li style="margin-bottom:5px;"><a href="#" style="text-decoration:underline;">The Community Giveaway (2021 Edition)</a></li>
-              <li style="margin-bottom:5px;"><a href="#" style="text-decoration:underline;">New user introduction thread</a></li>
-              <li style="margin-bottom:5px;"><a href="#" style="text-decoration:underline;">General chat thread</a></li>
+        <aside class="community-right">
+          <div class="community-box">
+            <h4>Tied this week</h4>
+            <ul class="highlight-list">
+              <li><a href="#">The Community Giveaway (2021 Edition)</a></li>
+              <li><a href="#">New user introduction thread</a></li>
+              <li><a href="#">General chat thread</a></li>
             </ul>
           </div>
 
-          <!-- News/Recent discussion -->
-          <div style="background:var(--bg-secondary); padding:15px; border-radius:4px;">
-            <h4 style="margin-bottom:10px;">News/Recent discussion</h4>
-            <ul style="list-style:none; margin-left:0; padding-left:0;">
-              <li style="margin-bottom:5px;"><a href="#" style="text-decoration:underline;">Games that need GOG containers or cross-platform fix</a></li>
-              <li style="margin-bottom:5px;"><a href="#" style="text-decoration:underline;">Games that finally got updated to release 1.0</a></li>
-              <li style="margin-bottom:5px;"><a href="#" style="text-decoration:underline;">News about GOG Galaxy integration with X</a></li>
+          <div class="community-box">
+            <h4>News/Recent discussion</h4>
+            <ul class="highlight-list">
+              <li><a href="#">Games that need GOG containers or cross-platform fix</a></li>
+              <li><a href="#">Games that finally got updated to release 1.0</a></li>
+              <li><a href="#">News about GOG Galaxy integration with X</a></li>
             </ul>
           </div>
         </aside>
