@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pl" class="dark-theme">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GOG Community</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+  </head>
+  <body>
+    <!-- LINK DO POMINIĘCIA NAWIGACJI -->
+    <a class="skip-link" href="#maincontent"
+      >Pomiń nawigację i przejdź do treści głównej</a
+    >
+
+    <!-- NAGŁÓWEK -->
+    <header>
+      <div class="top-bar">
+        <div class="logo" aria-label="GOG Logo">
+          <a href="index.html" title="Przejdź do strony głównej">
+            <img src="images/logo.png" alt="logo" style="width:45px;height:42px;" />
+          </a>
+        </div>
+        <nav aria-label="Główna nawigacja">
+          <ul>
+            <!-- Rozwijane menu dla "Sklep" -->
+            <li class="has-dropdown">
+              <a href="#">Sklep</a>
+              <div class="dropdown">
+                <ul>
+                  <li><a href="#">Sklep 1</a></li>
+                  <li><a href="#">Sklep 2</a></li>
+                  <li><a href="#">Sklep 3</a></li>
+                </ul>
+              </div>
+            </li>
+            <!-- Rozwijane menu dla "Nowości" -->
+            <li class="has-dropdown">
+              <a href="#">Nowości</a>
+              <div class="dropdown">
+                <ul>
+                  <li><a href="#">Nowość 1</a></li>
+                  <li><a href="#">Nowość 2</a></li>
+                  <li><a href="#">Nowość 3</a></li>
+                </ul>
+              </div>
+            </li>
+            <!-- Rozwijane menu dla "Promocje" -->
+            <li class="has-dropdown">
+              <a href="#">Promocje</a>
+              <div class="dropdown">
+                <ul>
+                  <li><a href="#">Promocja 1</a></li>
+                  <li><a href="#">Promocja 2</a></li>
+                  <li><a href="#">Promocja 3</a></li>
+                </ul>
+              </div>
+            </li>
+            <!-- Rozwijane menu dla "Kolekcja" -->
+            <li class="has-dropdown">
+              <a href="#">Kolekcja</a>
+              <div class="dropdown">
+                <ul>
+                  <li><a href="#">Kolekcja 1</a></li>
+                  <li><a href="#">Kolekcja 2</a></li>
+                  <li><a href="#">Kolekcja 3</a></li>
+                </ul>
+              </div>
+            </li>
+            <!-- Rozwijane menu dla "Wsparcie" -->
+            <li class="has-dropdown">
+              <a href="support.html">Wsparcie</a>
+              <div class="dropdown">
+                <ul>
+                  <li><a href="support.html#faq">FAQ</a></li>
+                  <li><a href="support.html#guides">Centrum wsparcia</a></li>
+                  <li><a href="support.html#contact">Kontakt</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="search-container">
+          <input type="search" id="search" placeholder="Szukaj gier..." />
+          <button type="button">OK</button>
+        </div>
+        <!-- Przełącznik trybu jasny/ciemny -->
+        <div class="theme-switch">
+          <input type="checkbox" id="theme-toggle" />
+          <label
+            class="slider"
+            for="theme-toggle"
+            aria-label="Przełącz tryb kontrastu"
+          ></label>
+        </div>
+      </div>
+    </header>
+
+    <!-- OVERLAY – stopniowe przyciemnienie tła przy hoverze na menu -->
+    <div class="menu-overlay"></div>
+
+    <!-- GŁÓWNA ZAWARTOŚĆ STRONY -->
+    <main id="maincontent" style="max-width:1200px; margin:0 auto; padding:20px;">
+
+      <!-- Trzy kolumny forum -->
+      <div class="community-layout" style="display:grid; grid-template-columns:1fr 2fr 1fr; gap:20px;">
+
+        <!-- Lewa kolumna -->
+        <aside class="community-sidebar" style="background:var(--bg-primary); padding:20px; border-radius:4px;">
+          <h2 style="margin-bottom:10px;">General Forums</h2>
+          <ul style="list-style:none; margin-left:0;">
+            <li style="margin-bottom:8px;">
+              <img src="images/logo.png" alt="Forum Icon" style="width:25px; vertical-align:middle; margin-right:5px;">
+              <a href="#">Community Wishlist</a>
+              <span style="color:#999; font-size:0.8rem;">- 1234 topics</span>
+            </li>
+            <li style="margin-bottom:8px;">
+              <img src="images/logo.png" alt="Forum Icon" style="width:25px; vertical-align:middle; margin-right:5px;">
+              <a href="#">General Discussion</a>
+              <span style="color:#999; font-size:0.8rem;">- 5678 topics</span>
+            </li>
+            <li style="margin-bottom:8px;">
+              <img src="images/logo.png" alt="Forum Icon" style="width:25px; vertical-align:middle; margin-right:5px;">
+              <a href="#">Announcements</a>
+              <span style="color:#999; font-size:0.8rem;">- 34 topics</span>
+            </li>
+            <li style="margin-bottom:8px;">
+              <img src="images/logo.png" alt="Forum Icon" style="width:25px; vertical-align:middle; margin-right:5px;">
+              <a href="#">Off-Topic</a>
+              <span style="color:#999; font-size:0.8rem;">- 999 topics</span>
+            </li>
+          </ul>
+          <h2 style="margin:20px 0 10px;">Game Specific Forums</h2>
+          <ul style="list-style:none; margin-left:0;">
+            <li style="margin-bottom:8px;">
+              <img src="images/logo.png" alt="Forum Icon" style="width:25px; vertical-align:middle; margin-right:5px;">
+              <a href="#">Game A</a>
+              <span style="color:#999; font-size:0.8rem;">- 250 topics</span>
+            </li>
+            <li style="margin-bottom:8px;">
+              <img src="images/logo.png" alt="Forum Icon" style="width:25px; vertical-align:middle; margin-right:5px;">
+              <a href="#">Game B</a>
+              <span style="color:#999; font-size:0.8rem;">- 340 topics</span>
+            </li>
+            <li style="margin-bottom:8px;">
+              <img src="images/logo.png" alt="Forum Icon" style="width:25px; vertical-align:middle; margin-right:5px;">
+              <a href="#">Game C</a>
+              <span style="color:#999; font-size:0.8rem;">- 120 topics</span>
+            </li>
+            <li style="margin-bottom:8px;">
+              <img src="images/logo.png" alt="Forum Icon" style="width:25px; vertical-align:middle; margin-right:5px;">
+              <a href="#">Game D</a>
+              <span style="color:#999; font-size:0.8rem;">- 89 topics</span>
+            </li>
+          </ul>
+          <p style="margin-top:20px;"><a href="#" style="color:var(--accent-color); text-decoration:underline;">More at GOG Forums »</a></p>
+        </aside>
+
+        <!-- Środkowa kolumna -->
+        <section class="community-main" style="background:var(--bg-primary); padding:20px; border-radius:4px;">
+          <!-- Community Wishlist highlight box -->
+          <div style="background:var(--bg-secondary); padding:15px; border-radius:4px; margin-bottom:20px;">
+            <h3 style="margin-bottom:10px;">Community Wishlist: this week's highlights</h3>
+            <ul style="list-style:none; margin-left:0; padding-left:0;">
+              <li style="margin-bottom:5px;"><a href="#" style="text-decoration:underline;">Suggestion: Add feature X</a></li>
+              <li style="margin-bottom:5px;"><a href="#" style="text-decoration:underline;">Idea: Another big update</a></li>
+              <li style="margin-bottom:5px;"><a href="#" style="text-decoration:underline;">Request: VR support</a></li>
+            </ul>
+            <p><a href="#" style="text-decoration:underline; color:var(--accent-color);">Read more at GOG Forums »</a></p>
+          </div>
+
+          <!-- My favourite topics -->
+          <div style="background:var(--bg-secondary); padding:15px; border-radius:4px; margin-bottom:20px;">
+            <h3 style="margin-bottom:10px;">My favourite topics</h3>
+            <p>No favourite topics yet? <a href="#" style="text-decoration:underline; color:var(--accent-color);">Explore the forum!</a></p>
+          </div>
+
+          <!-- Topics I've posted in -->
+          <div style="background:var(--bg-secondary); padding:15px; border-radius:4px;">
+            <h3 style="margin-bottom:10px;">Topics I've posted in</h3>
+            <p>You haven't posted in any conversations today.</p>
+          </div>
+        </section>
+
+        <!-- Prawa kolumna -->
+        <aside class="community-right" style="background:var(--bg-primary); padding:20px; border-radius:4px;">
+          <!-- Tied this week -->
+          <div style="background:var(--bg-secondary); padding:15px; border-radius:4px; margin-bottom:20px;">
+            <h4 style="margin-bottom:10px;">Tied this week</h4>
+            <ul style="list-style:none; margin-left:0; padding-left:0;">
+              <li style="margin-bottom:5px;"><a href="#" style="text-decoration:underline;">The Community Giveaway (2021 Edition)</a></li>
+              <li style="margin-bottom:5px;"><a href="#" style="text-decoration:underline;">New user introduction thread</a></li>
+              <li style="margin-bottom:5px;"><a href="#" style="text-decoration:underline;">General chat thread</a></li>
+            </ul>
+          </div>
+
+          <!-- News/Recent discussion -->
+          <div style="background:var(--bg-secondary); padding:15px; border-radius:4px;">
+            <h4 style="margin-bottom:10px;">News/Recent discussion</h4>
+            <ul style="list-style:none; margin-left:0; padding-left:0;">
+              <li style="margin-bottom:5px;"><a href="#" style="text-decoration:underline;">Games that need GOG containers or cross-platform fix</a></li>
+              <li style="margin-bottom:5px;"><a href="#" style="text-decoration:underline;">Games that finally got updated to release 1.0</a></li>
+              <li style="margin-bottom:5px;"><a href="#" style="text-decoration:underline;">News about GOG Galaxy integration with X</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- STOPKA -->
+    <footer>
+      <div class="footer-main">
+        <div class="footer-logo">
+          <img
+            src="https://via.placeholder.com/100x40?text=GOG+Logo"
+            alt="GOG.com"
+          />
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>O nas</h3>
+            <ul>
+              <li><a href="#">O GOG</a></li>
+              <li><a href="#">Kariery</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Społeczność</h3>
+            <ul>
+              <li><a href="#">Forum</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">YouTube</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Pomoc</h3>
+            <ul>
+              <li><a href="#">Centrum wsparcia</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Zgłoś problem</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Informacje prawne</h3>
+            <ul>
+              <li><a href="#">Regulamin</a></li>
+              <li><a href="#">Polityka prywatności</a></li>
+              <li><a href="#">Zasady społeczności</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Dostępność</h3>
+            <div class="font-controls">
+              <button id="font-reset" aria-label="Domyślna czcionka">A</button>
+              <button id="font-increase" aria-label="Powiększ czcionkę">A+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 GOG sp. z o.o. Wszelkie prawa zastrzeżone.</p>
+        <p>
+          Wszystkie znaki towarowe i zastrzeżone nazwy stanowią własność ich
+          prawowitych właścicieli.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Skrypt z obsługą trybu ciemnego/jasnego i zmiany rozmiaru tekstu -->
+    <script src="script.js"></script>
+  </body>
+</html>
