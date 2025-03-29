@@ -8,8 +8,18 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Sekcja 'promotions' nie została znaleziona.");
     }
   };
-
   window.scrollToPromotions = scrollToPromotions;
+
+  const links = document.querySelectorAll("a[href^='#']");
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
 
   const themeToggle = document.getElementById("theme-toggle");
   // const contrastToggle = document.getElementById("contrast-toggle");
