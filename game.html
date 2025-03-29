@@ -12,15 +12,16 @@
     <!-- Nagłówek -->
     <header>
         <div class="top-bar">
-            <div class="logo">
-                <a href="index.html">GOG.com</a>
-            </div>
+            <div class="logo" aria-label="GOG Logo">
+                <a href="index.html" title="Przejdź do strony głównej"><img src="images/logo.png" alt="logo" style="width:45px;height:42px;"></a>
+              </div>
             <nav>
                 <!-- Menu nawigacyjne -->
                 <ul>
-                    <li><a href="index.html">Strona główna</a></li>
-                    <li><a href="support.html">Wsparcie</a></li>
-                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="index.html">STRONA GŁÓWNA</a></li>
+                    <li><a href="game.html">GRY</a></li>
+                    <li><a href="support.html">WSPARCIE</a></li>
+                    <li><a href="forum.html">FORUM</a></li>
                 </ul>
             </nav>
             <label class="theme-switch">
@@ -83,40 +84,83 @@
         </section>
     </main>
 
+    <!-- SEKCJA NEWSLETTER -->
+    <section class="newsletter" aria-label="Zapisz się do newslettera">
+        <h2>Chcesz być na bieżąco?</h2>
+        <p>
+          Zapisz się do newslettera i otrzymuj informacje o promocjach i
+          nowościach.
+        </p>
+        <form action="#" method="post">
+          <label for="newsletter-email" class="visually-hidden"
+            >Adres e-mail</label
+          >
+          <input
+            type="email"
+            id="newsletter-email"
+            name="newsletter-email"
+            placeholder="Twój e-mail"
+            aria-required="true"
+          />
+          <button type="submit">Zapisz się</button>
+        </form>
+      </section>
     <!-- Stopka -->
+    <!-- STOPKA -->
     <footer>
         <div class="footer-main">
-            <div class="footer-logo">
-                GOG.com
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h3>O nas</h3>
+              <ul>
+                <li><a href="#">O GOG</a></li>
+                <li><a href="#">Kariery</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
             </div>
-            <div class="footer-links">
-                <div class="footer-column">
-                    <h3>O nas</h3>
-                    <ul>
-                        <li><a href="#">Nasza misja</a></li>
-                        <li><a href="#">Historia</a></li>
-                        <li><a href="#">Zespół</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Wsparcie</h3>
-                    <ul>
-                        <li><a href="#">Centrum pomocy</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column font-controls">
-                    Zmień rozmiar czcionki:
-                    <button id="font-increase">A+</button>
-                    <button id="font-reset">Resetuj</button>
-                </div>
+            <div class="footer-column">
+              <h3>Społeczność</h3>
+              <ul>
+                <li><a href="#">Forum</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">YouTube</a></li>
+              </ul>
             </div>
+            <div class="footer-column">
+              <h3>Pomoc</h3>
+              <ul>
+                <li><a href="#">Centrum wsparcia</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Zgłoś problem</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Informacje prawne</h3>
+              <ul>
+                <li><a href="#">Regulamin</a></li>
+                <li><a href="#">Polityka prywatności</a></li>
+                <li><a href="#">Zasady społeczności</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Dostępność</h3>
+              <div class="font-controls">
+                <button id="font-reset" aria-label="Domyślna czcionka">A</button>
+                <button id="font-increase" aria-label="Powiększ czcionkę">A+</button>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <!-- Informacje o prawach autorskich -->
-        <div class="footer-bottom">&copy; 2025 GOG.com. Wszelkie prawa zastrzeżone.</div>
-    </footer>
-
+        <div class="footer-bottom">
+          <p>© 2025 GOG sp. z o.o. Wszelkie prawa zastrzeżone.</p>
+          <p>
+            Wszystkie znaki towarowe i zastrzeżone nazwy stanowią własność ich
+            prawowitych właścicieli.
+          </p>
+        </div>
+      </footer>
     <!-- Skrypt JavaScript -->
     <script src="script.js"></script>
 </body>

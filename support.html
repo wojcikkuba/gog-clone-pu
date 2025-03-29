@@ -1,199 +1,165 @@
 <!DOCTYPE html>
 <html lang="pl" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Wsparcie - Sklep z Grami</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Wsparcie - Sklep z Grami</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-</head>
-
-<body>
-  <header>
-    <div class="top-bar">
-      <div class="logo" aria-label="GOG Logo">
-        <a href="index.html" title="Przejdź do strony głównej"><img src="images/logo.png" alt="logo" style="width:45px;height:42px;"></a>
+  <body>
+    <header>
+      <div class="top-bar">
+          <div class="logo" aria-label="GOG Logo">
+              <a href="index.html" title="Przejdź do strony głównej"><img src="images/logo.png" alt="logo" style="width:45px;height:42px;"></a>
+            </div>
+          <nav>
+              <!-- Menu nawigacyjne -->
+              <ul>
+                  <li><a href="index.html">STRONA GŁÓWNA</a></li>
+                  <li><a href="game.html">GRY</a></li>
+                  <li><a href="support.html">WSPARCIE</a></li>
+                  <li><a href="forum.html">FORUM</a></li>
+              </ul>
+          </nav>
+          <label class="theme-switch">
+              <input type="checkbox" id="theme-toggle">
+              <span class="slider"></span>
+          </label>
       </div>
-      <nav aria-label="Główna nawigacja">
-        <ul>
-          <!-- Rozwijane menu dla "Sklep" -->
-          <li class="has-dropdown">
-            <a href="#">Sklep</a>
-            <div class="dropdown">
-              <ul>
-                <li><a href="#">Sklep 1</a></li>
-                <li><a href="#">Sklep 2</a></li>
-                <li><a href="#">Sklep 3</a></li>
-              </ul>
-            </div>
-          </li>
-          <!-- Rozwijane menu dla "Nowości" -->
-          <li class="has-dropdown">
-            <a href="#">Nowości</a>
-            <div class="dropdown">
-              <ul>
-                <li><a href="#">Nowość 1</a></li>
-                <li><a href="#">Nowość 2</a></li>
-                <li><a href="#">Nowość 3</a></li>
-              </ul>
-            </div>
-          </li>
-          <!-- Rozwijane menu dla "Promocje" -->
-          <li class="has-dropdown">
-            <a href="#">Promocje</a>
-            <div class="dropdown">
-              <ul>
-                <li><a href="#">Promocja 1</a></li>
-                <li><a href="#">Promocja 2</a></li>
-                <li><a href="#">Promocja 3</a></li>
-              </ul>
-            </div>
-          </li>
-          <!-- Rozwijane menu dla "Kolekcja" -->
-          <li class="has-dropdown">
-            <a href="#">Kolekcja</a>
-            <div class="dropdown">
-              <ul>
-                <li><a href="#">Kolekcja 1</a></li>
-                <li><a href="#">Kolekcja 2</a></li>
-                <li><a href="#">Kolekcja 3</a></li>
-              </ul>
-            </div>
-          </li>
-          <!-- Rozwijane menu dla "Wsparcie" -->
-          <li class="has-dropdown">
-            <a href="support.html">Wsparcie</a>
-            <div class="dropdown">
-              <ul>
-                <li><a href="support.html#faq">FAQ</a></li>
-                <li><a href="support.html#guides">Centrum wsparcia</a></li>
-                <li><a href="support.html#contact">Kontakt</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
-      <div class="search-container">
-        <!-- <label for="search" class="visually-hidden">Szukaj</label> -->
-        <input type="search" id="search" placeholder="Szukaj gier..." />
-        <button type="button">OK</button>
-      </div>
-      <div class="theme-switch">
-        <input type="checkbox" id="theme-toggle" />
-        <label class="slider" for="theme-toggle" aria-label="Przełącz tryb kontrastu"></label>
-      </div>
-    </div>
   </header>
 
-  <main class="support-container">
-    <section class="support-hero">
-      <h1>Centrum Wsparcia</h1>
-      <div class="search-container">
-        <input type="search" placeholder="Wpisz pytanie lub słowo kluczowe..." />
-        <button><i class="fas fa-search"></i></button>
-      </div>
-    </section>
+    <main class="support-container">
+      <section class="support-hero">
+        <h1>Centrum Wsparcia</h1>
+        <div class="search-container">
+          <input
+            type="search"
+            placeholder="Wpisz słowa kluczowe..."
+          />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+      </section>
 
-    <section class="popular-topics">
-      <h2>Popularne tematy</h2>
-      <div class="topic-grid">
-        <a href="#" class="topic-card">
-          <i class="fas fa-shopping-cart"></i>
-          <h3>Problemy z zakupem</h3>
-        </a>
-        <a href="#" class="topic-card">
-          <i class="fas fa-download"></i>
-          <h3>Pobieranie gier</h3>
-        </a>
-        <a href="#" class="topic-card">
-          <i class="fas fa-key"></i>
-          <h3>Aktywacja produktu</h3>
-        </a>
-      </div>
-    </section>
+      <section class="popular-topics">
+        <h2>Popularne tematy</h2>
+        <div class="topic-grid">
+          <a href="#" class="topic-card">
+            <i class="fas fa-shopping-cart"></i>
+            <h3>Problemy z zakupem</h3>
+          </a>
+          <a href="#" class="topic-card">
+            <i class="fas fa-download"></i>
+            <h3>Pobieranie gier</h3>
+          </a>
+          <a href="#" class="topic-card">
+            <i class="fas fa-key"></i>
+            <h3>Aktywacja produktu</h3>
+          </a>
+        </div>
+      </section>
 
-    <section class="help-categories" id="guides">
-      <h2>Kategorie pomocy</h2>
-      <div class="category-grid">
-        <div class="category-card">
-          <h3><i class="fas fa-user"></i> Konto</h3>
-          <ul>
-            <li><a href="#">Rejestracja konta</a></li>
-            <li><a href="#">Zmiana hasła</a></li>
-          </ul>
+      <section class="help-categories" id="guides">
+        <h2>Kategorie pomocy</h2>
+        <div class="category-grid">
+          <div class="category-card">
+            <h3><i class="fas fa-user"></i> Konto</h3>
+            <ul>
+              <li><a href="#">Rejestracja konta</a></li>
+              <li><a href="#">Zmiana hasła</a></li>
+            </ul>
+          </div>
+          <div class="category-card">
+            <h3><i class="fas fa-credit-card"></i> Płatności</h3>
+            <ul>
+              <li><a href="#">Metody płatności</a></li>
+              <li><a href="#">Zwroty</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="category-card">
-          <h3><i class="fas fa-credit-card"></i> Płatności</h3>
-          <ul>
-            <li><a href="#">Metody płatności</a></li>
-            <li><a href="#">Zwroty</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="contact-form" id="contact">
-      <h2>Skontaktuj się z nami</h2>
-      <form>
-        <div class="form-group">
-          <label for="email">Twój email</label>
-          <input type="email" id="email" required />
-        </div>
-        <div class="form-group">
-          <label for="message">Wiadomość</label>
-          <textarea id="message" rows="5" required></textarea>
-        </div>
-        <button type="submit">Wyślij</button>
+      <section class="contact-form" id="contact">
+        <h2>Skontaktuj się z nami</h2>
+        <form>
+          <div class="form-group">
+            <label for="email">Twój email</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Wiadomość</label>
+            <textarea id="message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Wyślij</button>
+        </form>
+      </section>
+    </main>
+    <!-- SEKCJA NEWSLETTER -->
+    <section class="newsletter" aria-label="Zapisz się do newslettera">
+      <h2>Chcesz być na bieżąco?</h2>
+      <p>
+        Zapisz się do newslettera i otrzymuj informacje o promocjach i
+        nowościach.
+      </p>
+      <form action="#" method="post">
+        <label for="newsletter-email" class="visually-hidden"
+          >Adres e-mail</label
+        >
+        <input
+          type="email"
+          id="newsletter-email"
+          name="newsletter-email"
+          placeholder="Twój e-mail"
+          aria-required="true"
+        />
+        <button type="submit">Zapisz się</button>
       </form>
     </section>
-  </main>
-
-  <footer>
-    <div class="footer-main">
-      <div class="footer-logo">
-        <h3>GOG.com</h3>
-      </div>
-      <div class="footer-links">
-        <div class="footer-column">
-          <h3>O nas</h3>
-          <ul>
-            <li><a href="#">Nasza misja</a></li>
-            <li><a href="#">Historia</a></li>
-            <li><a href="#">Zespół</a></li>
-            <li><a href="#">Kariera</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Wsparcie</h3>
-          <ul>
-            <li><a href="support.html">Centrum pomocy</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Kontakt</a></li>
-            <li><a href="#">Zwroty</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Informacje prawne</h3>
-          <ul>
-            <li><a href="#">Regulamin</a></li>
-            <li><a href="#">Polityka prywatności</a></li>
-            <li><a href="#">Cookies</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Dostępność</h3>
-          <div class="font-controls">
-            <button id="font-reset">A</button>
-            <button id="font-increase">A+</button>
+    <footer>
+      <div class="footer-main">
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>O nas</h3>
+            <ul>
+              <li><a href="#">Nasza misja</a></li>
+              <li><a href="#">Historia</a></li>
+              <li><a href="#">Zespół</a></li>
+              <li><a href="#">Kariera</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Wsparcie</h3>
+            <ul>
+              <li><a href="support.html">Centrum pomocy</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Kontakt</a></li>
+              <li><a href="#">Zwroty</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Informacje prawne</h3>
+            <ul>
+              <li><a href="#">Regulamin</a></li>
+              <li><a href="#">Polityka prywatności</a></li>
+              <li><a href="#">Cookies</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Dostępność</h3>
+            <div class="font-controls">
+              <button id="font-reset">A</button>
+              <button id="font-increase">A+</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 GOG.com. Wszelkie prawa zastrzeżone.</p>
-    </div>
-  </footer>
-  <script src="script.js"></script>
-</body>
-
+      <div class="footer-bottom">
+        <p>&copy; 2025 GOG.com. Wszelkie prawa zastrzeżone.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>

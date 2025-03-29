@@ -434,7 +434,7 @@ main {
     width: 250px;
 }
 
-.newsletter button {
+.newsletter button, .contact-form button {
     background: var(--button-bg);
     color: #fff;
     padding: 8px 16px;
