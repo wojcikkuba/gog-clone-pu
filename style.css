@@ -940,3 +940,34 @@ input:checked+.slider:before {
 .game-cta button:hover {
     background-color: #5e2ccc;
 }
+
+/* Stylizacja strzałki powrotu na górę */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Domyślnie niewidoczna */
+    visibility: hidden; /* Ukryta dla czytników ekranowych */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000; /* Na wierzchu innych elementów */
+}
+
+.scroll-to-top:hover {
+    background-color: #5e2ccc; /* Jaśniejszy kolor po najechaniu */
+}
+
+/* Widoczna strzałka */
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}

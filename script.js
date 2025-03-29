@@ -21,6 +21,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const scrollToTopButton = document.getElementById("scroll-to-top");
+  const toggleScrollToTopButton = () => {
+    if (window.scrollY > window.innerHeight) {
+      scrollToTopButton.classList.add("visible");
+    } else {
+      scrollToTopButton.classList.remove("visible");
+    }
+  };
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  window.addEventListener("scroll", toggleScrollToTopButton);
+  scrollToTopButton.addEventListener("click", scrollToTop);
+
   const themeToggle = document.getElementById("theme-toggle");
   // const contrastToggle = document.getElementById("contrast-toggle");
   // const body = document.body;
