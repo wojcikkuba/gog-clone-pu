@@ -1,6 +1,19 @@
 // POPRAWIONA SKŁADNIA I LOGIKA
 document.addEventListener("DOMContentLoaded", () => {
+  const scrollToPromotions = () => {
+    const promotionsSection = document.getElementById("promotions");
+    if (promotionsSection) {
+        promotionsSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+        console.error("Sekcja 'promotions' nie została znaleziona.");
+    }
+  };
+
+  window.scrollToPromotions = scrollToPromotions;
+
   const themeToggle = document.getElementById("theme-toggle");
+  // const contrastToggle = document.getElementById("contrast-toggle");
+  // const body = document.body;
   const htmlElement = document.documentElement;
   const fontSizeKeys = { min: 100, max: 200, step: 25 };
   const root = document.documentElement;
@@ -40,4 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("theme", isDark ? "dark" : "light");
     applyTheme(isDark);
   });
+
+  // const toggleContrast = () => {
+  //   body.classList.toggle("high-contrast");
+  //   const isHighContrast = body.classList.contains("high-contrast");
+  //   contrastToggle
 });

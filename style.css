@@ -10,6 +10,8 @@
     --accent-color: #7d43ff;
     --header-bg: #2c2c2c;
     --button-bg: #2c2c2c;
+    --high-contrast-bg: #000000;
+    --high-contrast-text: #ffffff;
 }
 
 [data-theme="dark"] {
@@ -70,6 +72,23 @@ img {
 
 .skip-link:focus {
     top: 0;
+}
+
+body.high-contrast {
+    background: var(--high-contrast-bg);
+    color: var(--high-contrast-text);
+}
+
+body.high-contrast a,
+body.high-contrast button {
+    color: var(--high-contrast-text);
+    border-color: var(--high-contrast-text);
+}
+
+body.high-contrast .game-card,
+body.high-contrast .promo-item {
+  background-color: var(--high-contrast-bg);
+  border-color: var(--high-contrast-text);
 }
 
 /* ======================================
@@ -878,3 +897,46 @@ input:checked+.slider:before {
     text-decoration: underline;
     color: var(--accent-color);
   }
+
+  .game-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.game-hero {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.game-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.game-images img {
+    max-width: 45%;
+    border-radius: 8px;
+}
+
+.game-description, .game-requirements {
+    margin-bottom: 20px;
+}
+
+.game-cta {
+    text-align: center;
+}
+
+.game-cta button {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.game-cta button:hover {
+    background-color: #5e2ccc;
+}
