@@ -1,11 +1,10 @@
-// POPRAWIONA SKŁADNIA I LOGIKA
 document.addEventListener("DOMContentLoaded", () => {
   const scrollToPromotions = () => {
     const promotionsSection = document.getElementById("promotions");
     if (promotionsSection) {
-        promotionsSection.scrollIntoView({ behavior: "smooth" });
+      promotionsSection.scrollIntoView({ behavior: "smooth" });
     } else {
-        console.error("Sekcja 'promotions' nie została znaleziona.");
+      console.error("Sekcja 'promotions' nie została znaleziona.");
     }
   };
   window.scrollToPromotions = scrollToPromotions;
@@ -35,9 +34,24 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", toggleScrollToTopButton);
   scrollToTopButton.addEventListener("click", scrollToTop);
 
-  const themeToggle = document.getElementById("theme-toggle");
-  // const contrastToggle = document.getElementById("contrast-toggle");
-  // const body = document.body;
+  const contrastToggle = document.getElementById("contrast-toggle");
+  const body = document.body;
+  const icon = contrastToggle.querySelector("i");
+
+  const toggleContrast = () => {
+    const isHighContrast = body.classList.toggle("high-contrast");
+    localStorage.setItem("highContrast", isHighContrast);
+    icon.className = isHighContrast ? "fas fa-eye-slash" : "fas fa-eye";
+  };
+
+  contrastToggle.addEventListener("click", toggleContrast);
+
+  const savedContrast = localStorage.getItem("highContrast") === "true";
+  if (savedContrast) {
+    body.classList.add("high-contrast");
+    icon.className = "fas fa-eye-slash";
+  }
+
   const htmlElement = document.documentElement;
   const fontSizeKeys = { min: 100, max: 200, step: 25 };
   const root = document.documentElement;
@@ -47,23 +61,25 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("fontSize", size);
   };
 
-  const currentSize = parseInt(localStorage.getItem("fontSize")) || 100;
+  let currentSize = parseInt(localStorage.getItem("fontSize")) || 100;
   updateFontSize(currentSize);
 
   document.getElementById('font-increase').addEventListener('click', () => {
     const newSize = Math.min(fontSizeKeys.max, currentSize + fontSizeKeys.step);
-    if(newSize !== currentSize) updateFontSize(newSize);
+    if (newSize !== currentSize) {
+      currentSize = newSize;
+      updateFontSize(newSize);
+    }
   });
 
   document.getElementById('font-reset').addEventListener('click', () => {
+    currentSize = 100;
     updateFontSize(100);
   });
 
-  const savedTheme =
-    localStorage.getItem("theme") ||
-    (window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light");
+  const themeToggle = document.getElementById("theme-toggle");
+  const savedTheme = localStorage.getItem("theme") ||
+    (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
   const applyTheme = (isDark) => {
     htmlElement.setAttribute("data-theme", isDark ? "dark" : "light");
@@ -77,9 +93,4 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("theme", isDark ? "dark" : "light");
     applyTheme(isDark);
   });
-
-  // const toggleContrast = () => {
-  //   body.classList.toggle("high-contrast");
-  //   const isHighContrast = body.classList.contains("high-contrast");
-  //   contrastToggle
 });

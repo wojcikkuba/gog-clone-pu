@@ -74,6 +74,7 @@ img {
     top: 0;
 }
 
+/* Styl dla trybu wysokiego kontrastu */
 body.high-contrast {
     background: var(--high-contrast-bg);
     color: var(--high-contrast-text);
@@ -87,10 +88,59 @@ body.high-contrast button {
 
 body.high-contrast .game-card,
 body.high-contrast .promo-item {
-  background-color: var(--high-contrast-bg);
-  border-color: var(--high-contrast-text);
+    background-color: var(--high-contrast-bg);
+    border-color: var(--high-contrast-text);
 }
 
+/* Dostosowanie dla innych sekcji */
+body.high-contrast header,
+body.high-contrast footer {
+    background-color: var(--high-contrast-bg);
+    color: var(--high-contrast-text);
+}
+
+#contrast-toggle {
+    background-color: #7d43ff;
+    color: white;
+    border: 2px solid #5a2bb5;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+#contrast-toggle:hover {
+    background-color: #5a2bb5;
+    transform: scale(1.1);
+}
+
+.high-contrast #contrast-toggle {
+    background-color: yellow !important;
+    color: black !important;
+    border: 3px solid black;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: pulse 1s infinite alternate;
+  }
+
+  /* Ikona w trybie wysokiego kontrastu */
+.high-contrast #contrast-toggle i {
+    color: black !important;
+    text-shadow: 0 0 5px white;
+}
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+    100% {
+      transform: scale(1.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    }
+}
+  
 /* ======================================
      NAGŁÓWEK I NAWIGACJA
      ====================================== */
